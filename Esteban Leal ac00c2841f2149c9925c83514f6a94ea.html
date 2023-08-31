@@ -1,0 +1,687 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Esteban Leal</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="ac00c284-1f21-49c9-925c-83514f6a94ea" class="page sans"><header><img class="page-cover-image" src="Esteban%20Leal%20ac00c2841f2149c9925c83514f6a94ea/Cover__Boxes_and_circles.png" style="object-position:center 61.84%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Esteban%20Leal%20ac00c2841f2149c9925c83514f6a94ea/yo.jpg"/></div><h1 class="page-title">Esteban Leal</h1><p class="page-description"></p></header><div class="page-body"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="69180bae-ea02-4cbf-99de-149d93ee0c89"><div style="font-size:1.5em"><span class="icon">🧑🏻‍🎨</span></div><div style="width:100%">Developer<em> | Engineering Student | Lifelong Learner |</em></div></figure><hr id="a349a83c-9167-4915-a071-5b14811c63ab"/><ul id="7116db32-36ba-47f6-b889-dbaed84a5db6" class="toggle"><li><details open=""><summary><strong>Page Navigation</strong></summary><nav id="eb1929db-69f4-4587-ab83-24d40d525636" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#03971dc0-e1da-49e9-8c9c-fd28eb3976e9">👋 About Me</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#44361965-49da-4633-933e-5773ea19bf9d">Creative Coder with a passion for learning</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#83d21561-3ffa-426a-b48d-0581ba595073">☎️ Contact</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#8c1a100d-f278-477f-ac1f-e3272a9a7a3e">🌐 Website</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#633256ca-67b9-4014-94d3-6c58f9304c4a">✨ Skills</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#7bfa7a7b-3b19-4362-a076-98aab54bdb6a">💫 Apps</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#cbc38727-4f11-46f9-980e-a3a7a958b095">🌟 Languages</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#0309aca3-3e74-4721-b9eb-e4cd3b77559e">🎓 Education</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#8f058447-9085-4219-aac6-d4e60a1a0c28">Instituto Tecnológico y de Estudios Superiores de Monterrey</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#a5b66da0-203c-425d-aa3c-0639114b9a86">🏆 Honors &amp; Awards</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#00b5a1d3-22bd-46c8-a0bc-585e371a4604">📒 Languaje Strategies: From the meme to divulgation</a></div></nav></details></li></ul><h1 id="03971dc0-e1da-49e9-8c9c-fd28eb3976e9" class="block-color-default">👋 About Me</h1><h2 id="44361965-49da-4633-933e-5773ea19bf9d" class="">Creative Coder with a passion for learning</h2><div id="431f671b-ec3b-47aa-b465-b52117187186" class="column-list"><div id="8bc807de-066c-4fa1-af48-7c1fed350560" style="width:37.5%" class="column"><figure id="c13e3fa8-7371-49d1-9833-0aa4af4a22d3" class="image"><a href="Esteban%20Leal%20ac00c2841f2149c9925c83514f6a94ea/charged_up.png"><img style="width:800px" src="Esteban%20Leal%20ac00c2841f2149c9925c83514f6a94ea/charged_up.png"/></a></figure><hr id="3f419291-2278-4a51-8e9e-af52fafa4565"/><p id="09d44d3f-6f7c-4495-a0cb-5c51cbb589c3" class="">💻 Passionate Developer
+📚 Engineering Student
+📘 Lifelong Learner</p></div><div id="4b4a287b-aa9e-4de2-8617-2f66e4b56eb8" style="width:81.25%" class="column"><blockquote id="e50b1564-8561-4d2d-affa-bce57af083b1" class="block-color-default">I am <strong>Esteban Leal Menéndez</strong>, current student at Tecnológico de Monterrey, studying Computer Technology Engineering. I like <strong>programming</strong> and anything to do with computers.
+I was on the Tecbot 3158 robotics team where I <strong>learned to program in Java</strong> and various mechanical things and due to my <strong>fast learning capabilities</strong> and <strong>dexterity</strong> I got to be part of the drive team. Later I was on the High Altitude 9280 robotics team as a <strong>programming mentor</strong>. Both participating in the FRC competition. I have participated in a Hack&#x27;n&#x27;jam where my team and I came in 4th place; and a Hackathon where my team and I won first place with an inclusive project based on sign language.<p id="e9c222b2-e634-4c9e-a17c-c267596e8f65" class="">Talking more about me, I really like <strong>learning and meeting people</strong>, that&#x27;s why I&#x27;m in the representative band of the campus playing electric guitar. I like to play sports, specifically team sports like soccer and volleyball, although I also like to play tennis. I love playing video games and watching movies.</p></blockquote><p id="0310eaba-85f6-4770-a2e4-91c1fec59a66" class="">
+</p><p id="06f26ee4-8e96-48bd-bb06-cca0dc259d4f" class="">
+</p></div></div><div id="261d539b-594d-4df3-bc54-5d257f3f94ed" class="column-list"><div id="b73fdee8-1796-4698-982f-9a49a294cfd8" style="width:68.75%" class="column"><h1 id="83d21561-3ffa-426a-b48d-0581ba595073" class="">☎️ Contact</h1><p id="da3a4c5e-bfb4-4988-92de-317740cebb28" class="">✉️ <strong>Email</strong></p><p id="2f277878-5136-4b37-a2c0-3005283cb415" class=""><a href="https://www.notion.so/Esteban-Leal-ac00c2841f2149c9925c83514f6a94ea?pvs=21">esteban.lealm@outlook.com</a></p><p id="215249db-6974-468b-b923-9e66a7ff5dcd" class="">📷 Instagram</p><p id="637b7dcc-1fe9-4905-99c3-e884aab041bc" class=""><strong><a href="https://www.instagram.com/mr.estebato/">@mr.estebato</a></strong></p><p id="8ca9d9f5-0c83-4af0-a835-40965c138e08" class="">
+</p></div><div id="bd2b3c7d-192a-403d-aa73-b51e783bde18" style="width:77.40384615384616%" class="column"><h1 id="8c1a100d-f278-477f-ac1f-e3272a9a7a3e" class="">🌐 Website</h1><p id="9532b9fe-ac94-4b76-b4fe-13a7d595d7e2" class="">💼 <strong>Linkedin</strong>
+<strong><a href="http://www.linkedin.com/in/esteban-l-b7aa97266">www.linkedin.com/in/esteban-l-b7aa97266</a></strong></p><p id="e9d36dcf-61c4-4902-a42b-1b29c6946025" class="">
+</p></div></div><div id="5f2852c9-4fec-46e8-be1e-5d8a5b3b44fb" class="column-list"><div id="75b9842c-dc81-4b23-adfe-2ff51126524f" style="width:41.666666666666664%" class="column"><h3 id="633256ca-67b9-4014-94d3-6c58f9304c4a" class="">✨ Skills</h3><p id="3040d56c-a247-4029-acbd-533b96a52ca3" class="">◈ Coding</p><p id="b4087478-751a-4746-ae3e-b557ee442e4d" class="">◈ Public Speech</p><p id="ddfcedaf-c6b7-46cb-80f3-f1d43016853d" class="">◈ Team work</p><p id="7ecc08ed-15f9-4321-a14b-50c971ae1130" class="">◈ Fast Learning</p></div><div id="b2f688f3-a37f-4152-95c8-f2cf5fba7086" style="width:33.33333333333333%" class="column"><h3 id="7bfa7a7b-3b19-4362-a076-98aab54bdb6a" class="">💫 Apps</h3><p id="a3743c9c-bfdd-4125-8773-b4f87a8ef4c7" class="">◈ Excel</p><p id="a502eaef-86a4-4605-a6ea-3336fa929fd4" class="">◈ Github</p><p id="a44b25ac-c2cb-4c57-8c90-619dd1154389" class="">◈ Visual Studio Code</p><p id="def22de5-ae69-459c-8620-7565c1c6e869" class="">◈ Pixlr</p></div><div id="883300d9-a355-4d8a-8e8d-43b0b744cd20" style="width:24.999999999999993%" class="column"><h3 id="cbc38727-4f11-46f9-980e-a3a7a958b095" class="">🌟 Languages</h3><p id="5b33f2ee-9a21-492c-ac00-451a07ea4a6f" class="">◈ Python</p><p id="0ffad370-5eaf-49a6-bd43-337327072f3b" class="">◈ Java</p><p id="3f34ef53-afb1-4c15-9ad0-f8775354940b" class="">◈ HTML/Javascript/CSS</p><p id="9f5b12bd-33ff-43b1-bdb5-1e2c4cf7d6d7" class="">◈ C++</p></div></div><hr id="f3252cf1-5e4d-43fd-a526-d4c0c7ec4fb8"/><h1 id="0309aca3-3e74-4721-b9eb-e4cd3b77559e" class="">🎓 Education</h1><h2 id="8f058447-9085-4219-aac6-d4e60a1a0c28" class="">Instituto Tecnológico y de Estudios Superiores de Monterrey</h2><hr id="69c5628f-8ac8-4d90-9605-76c48eb1fdba"/><p id="f8af7a18-f900-4ec4-b67e-f3c8641598da" class=""><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Current student in ITESM Campus Toluca</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></p><p id="6ca8657a-ae93-4c7e-97c4-6d8a6f240f18" class="">ITC (Engineering in computer technologies)</p><h1 id="a5b66da0-203c-425d-aa3c-0639114b9a86" class="">🏆 Honors &amp; Awards</h1><hr id="7d59ff15-d34d-4930-a9b5-82215d17474a"/><div id="b3561c7d-b411-4e69-b1df-5f5be8b3627e" class="column-list"><div id="fbbbc81b-f7e3-4988-bfaa-a3089817755b" style="width:50.00000000000002%" class="column"><blockquote id="c51bf015-b77a-47d3-8476-d4f01d91a187" class=""><strong>🎗️Active LiFE student
+</strong><hr id="b8ae9331-f1ec-45f0-8ec7-33964431a136"/><p id="2f13ce52-0cc0-4559-b3c6-e8adec38a5e5" class="">May 2022  <strong><strong>· PrepaTec Metepec</strong></strong></p><ul id="7f826692-f134-4a1c-b234-672b48f4e471" class="toggle"><li><details open=""><summary>Description</summary><p id="679f5fa6-653c-4d0a-9a26-0d5515cd4923" class="">I received and award regarding my excellent participation in extracurricular activities such as, music, soccer teams, tennis tournaments and volleyball tournaments as well as volunteering to help student groups ac</p></details></li></ul></blockquote></div><div id="cc8bfbb5-1962-4252-96ce-253f4506fb7c" style="width:50.000000000000014%" class="column"><blockquote id="de97ed44-9339-4e4d-b684-a0c7cc671f6e" class="">🥇<strong> 1st Place in Hackaton Competition</strong><hr id="b911a0f6-2822-4c24-a241-ebf1e6aaee45"/><p id="18625b39-9082-4b3d-9341-2d41117f08aa" class="">June 2023  <strong><strong>· Instituto Tecnológico y de Estudios Superiores de Monterrey</strong></strong></p><ul id="0754be66-e3d4-41de-900d-0d4626287db1" class="toggle"><li><details open=""><summary>Description</summary><p id="944b1216-6e04-40fa-b4ff-10ba6711ea41" class="">I participated in a competition called Hackaton hosted in ITESM Campus Toluca where my team and I created an inclusive idea to help deaf-mute and mute people  comunicate easily based on sign language.</p></details></li></ul></blockquote></div></div><hr id="8522307e-e283-4765-b3e2-a58b1f2a8778"/><p id="906459b8-3b14-41f9-9bcb-a8253f7cc108" class="">
+</p><h1 id="00b5a1d3-22bd-46c8-a0bc-585e371a4604" class="">📒 Languaje Strategies: From the meme to divulgation</h1><p id="e5dff4c4-cdf3-4931-82a2-ac578dead669" class="">
+</p></div></article></body></html>
