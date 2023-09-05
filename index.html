@@ -1,686 +1,247 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Esteban Leal</title><style>
-/* cspell:disable-file */
-/* webkit printing magic: print all background colors */
-html {
-	-webkit-print-color-adjust: exact;
-}
-* {
-	box-sizing: border-box;
-	-webkit-print-color-adjust: exact;
-}
-
-html,
-body {
-	margin: 0;
-	padding: 0;
-}
-@media only screen {
-	body {
-		margin: 2em auto;
-		max-width: 900px;
-		color: rgb(55, 53, 47);
-	}
-}
-
-body {
-	line-height: 1.5;
-	white-space: pre-wrap;
-}
-
-a,
-a.visited {
-	color: inherit;
-	text-decoration: underline;
-}
-
-.pdf-relative-link-path {
-	font-size: 80%;
-	color: #444;
-}
-
-h1,
-h2,
-h3 {
-	letter-spacing: -0.01em;
-	line-height: 1.2;
-	font-weight: 600;
-	margin-bottom: 0;
-}
-
-.page-title {
-	font-size: 2.5rem;
-	font-weight: 700;
-	margin-top: 0;
-	margin-bottom: 0.75em;
-}
-
-h1 {
-	font-size: 1.875rem;
-	margin-top: 1.875rem;
-}
-
-h2 {
-	font-size: 1.5rem;
-	margin-top: 1.5rem;
-}
-
-h3 {
-	font-size: 1.25rem;
-	margin-top: 1.25rem;
-}
-
-.source {
-	border: 1px solid #ddd;
-	border-radius: 3px;
-	padding: 1.5em;
-	word-break: break-all;
-}
-
-.callout {
-	border-radius: 3px;
-	padding: 1rem;
-}
-
-figure {
-	margin: 1.25em 0;
-	page-break-inside: avoid;
-}
-
-figcaption {
-	opacity: 0.5;
-	font-size: 85%;
-	margin-top: 0.5em;
-}
-
-mark {
-	background-color: transparent;
-}
-
-.indented {
-	padding-left: 1.5em;
-}
-
-hr {
-	background: transparent;
-	display: block;
-	width: 100%;
-	height: 1px;
-	visibility: visible;
-	border: none;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
-}
-
-img {
-	max-width: 100%;
-}
-
-@media only print {
-	img {
-		max-height: 100vh;
-		object-fit: contain;
-	}
-}
-
-@page {
-	margin: 1in;
-}
-
-.collection-content {
-	font-size: 0.875rem;
-}
-
-.column-list {
-	display: flex;
-	justify-content: space-between;
-}
-
-.column {
-	padding: 0 1em;
-}
-
-.column:first-child {
-	padding-left: 0;
-}
-
-.column:last-child {
-	padding-right: 0;
-}
-
-.table_of_contents-item {
-	display: block;
-	font-size: 0.875rem;
-	line-height: 1.3;
-	padding: 0.125rem;
-}
-
-.table_of_contents-indent-1 {
-	margin-left: 1.5rem;
-}
-
-.table_of_contents-indent-2 {
-	margin-left: 3rem;
-}
-
-.table_of_contents-indent-3 {
-	margin-left: 4.5rem;
-}
-
-.table_of_contents-link {
-	text-decoration: none;
-	opacity: 0.7;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
-}
-
-table,
-th,
-td {
-	border: 1px solid rgba(55, 53, 47, 0.09);
-	border-collapse: collapse;
-}
-
-table {
-	border-left: none;
-	border-right: none;
-}
-
-th,
-td {
-	font-weight: normal;
-	padding: 0.25em 0.5em;
-	line-height: 1.5;
-	min-height: 1.5em;
-	text-align: left;
-}
-
-th {
-	color: rgba(55, 53, 47, 0.6);
-}
-
-ol,
-ul {
-	margin: 0;
-	margin-block-start: 0.6em;
-	margin-block-end: 0.6em;
-}
-
-li > ol:first-child,
-li > ul:first-child {
-	margin-block-start: 0.6em;
-}
-
-ul > li {
-	list-style: disc;
-}
-
-ul.to-do-list {
-	padding-inline-start: 0;
-}
-
-ul.to-do-list > li {
-	list-style: none;
-}
-
-.to-do-children-checked {
-	text-decoration: line-through;
-	opacity: 0.375;
-}
-
-ul.toggle > li {
-	list-style: none;
-}
-
-ul {
-	padding-inline-start: 1.7em;
-}
-
-ul > li {
-	padding-left: 0.1em;
-}
-
-ol {
-	padding-inline-start: 1.6em;
-}
-
-ol > li {
-	padding-left: 0.2em;
-}
-
-.mono ol {
-	padding-inline-start: 2em;
-}
-
-.mono ol > li {
-	text-indent: -0.4em;
-}
-
-.toggle {
-	padding-inline-start: 0em;
-	list-style-type: none;
-}
-
-/* Indent toggle children */
-.toggle > li > details {
-	padding-left: 1.7em;
-}
-
-.toggle > li > details > summary {
-	margin-left: -1.1em;
-}
-
-.selected-value {
-	display: inline-block;
-	padding: 0 0.5em;
-	background: rgba(206, 205, 202, 0.5);
-	border-radius: 3px;
-	margin-right: 0.5em;
-	margin-top: 0.3em;
-	margin-bottom: 0.3em;
-	white-space: nowrap;
-}
-
-.collection-title {
-	display: inline-block;
-	margin-right: 1em;
-}
-
-.page-description {
-    margin-bottom: 2em;
-}
-
-.simple-table {
-	margin-top: 1em;
-	font-size: 0.875rem;
-	empty-cells: show;
-}
-.simple-table td {
-	height: 29px;
-	min-width: 120px;
-}
-
-.simple-table th {
-	height: 29px;
-	min-width: 120px;
-}
-
-.simple-table-header-color {
-	background: rgb(247, 246, 243);
-	color: black;
-}
-.simple-table-header {
-	font-weight: 500;
-}
-
-time {
-	opacity: 0.5;
-}
-
-.icon {
-	display: inline-block;
-	max-width: 1.2em;
-	max-height: 1.2em;
-	text-decoration: none;
-	vertical-align: text-bottom;
-	margin-right: 0.5em;
-}
-
-img.icon {
-	border-radius: 3px;
-}
-
-.user-icon {
-	width: 1.5em;
-	height: 1.5em;
-	border-radius: 100%;
-	margin-right: 0.5rem;
-}
-
-.user-icon-inner {
-	font-size: 0.8em;
-}
-
-.text-icon {
-	border: 1px solid #000;
-	text-align: center;
-}
-
-.page-cover-image {
-	display: block;
-	object-fit: cover;
-	width: 100%;
-	max-height: 30vh;
-}
-
-.page-header-icon {
-	font-size: 3rem;
-	margin-bottom: 1rem;
-}
-
-.page-header-icon-with-cover {
-	margin-top: -0.72em;
-	margin-left: 0.07em;
-}
-
-.page-header-icon img {
-	border-radius: 3px;
-}
-
-.link-to-page {
-	margin: 1em 0;
-	padding: 0;
-	border: none;
-	font-weight: 500;
-}
-
-p > .user {
-	opacity: 0.5;
-}
-
-td > .user,
-td > time {
-	white-space: nowrap;
-}
-
-input[type="checkbox"] {
-	transform: scale(1.5);
-	margin-right: 0.6em;
-	vertical-align: middle;
-}
-
-p {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-}
-
-.image {
-	border: none;
-	margin: 1.5em 0;
-	padding: 0;
-	border-radius: 0;
-	text-align: center;
-}
-
-.code,
-code {
-	background: rgba(135, 131, 120, 0.15);
-	border-radius: 3px;
-	padding: 0.2em 0.4em;
-	border-radius: 3px;
-	font-size: 85%;
-	tab-size: 2;
-}
-
-code {
-	color: #eb5757;
-}
-
-.code {
-	padding: 1.5em 1em;
-}
-
-.code-wrap {
-	white-space: pre-wrap;
-	word-break: break-all;
-}
-
-.code > code {
-	background: none;
-	padding: 0;
-	font-size: 100%;
-	color: inherit;
-}
-
-blockquote {
-	font-size: 1.25em;
-	margin: 1em 0;
-	padding-left: 1em;
-	border-left: 3px solid rgb(55, 53, 47);
-}
-
-.bookmark {
-	text-decoration: none;
-	max-height: 8em;
-	padding: 0;
-	display: flex;
-	width: 100%;
-	align-items: stretch;
-}
-
-.bookmark-title {
-	font-size: 0.85em;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	height: 1.75em;
-	white-space: nowrap;
-}
-
-.bookmark-text {
-	display: flex;
-	flex-direction: column;
-}
-
-.bookmark-info {
-	flex: 4 1 180px;
-	padding: 12px 14px 14px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.bookmark-image {
-	width: 33%;
-	flex: 1 1 180px;
-	display: block;
-	position: relative;
-	object-fit: cover;
-	border-radius: 1px;
-}
-
-.bookmark-description {
-	color: rgba(55, 53, 47, 0.6);
-	font-size: 0.75em;
-	overflow: hidden;
-	max-height: 4.5em;
-	word-break: break-word;
-}
-
-.bookmark-href {
-	font-size: 0.75em;
-	margin-top: 0.25em;
-}
-
-.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
-.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
-.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
-.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
-.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
-.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
-.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
-.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
-.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
-.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
-.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
-.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
-.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-.highlight-default {
-	color: rgba(55, 53, 47, 1);
-}
-.highlight-gray {
-	color: rgba(120, 119, 116, 1);
-	fill: rgba(120, 119, 116, 1);
-}
-.highlight-brown {
-	color: rgba(159, 107, 83, 1);
-	fill: rgba(159, 107, 83, 1);
-}
-.highlight-orange {
-	color: rgba(217, 115, 13, 1);
-	fill: rgba(217, 115, 13, 1);
-}
-.highlight-yellow {
-	color: rgba(203, 145, 47, 1);
-	fill: rgba(203, 145, 47, 1);
-}
-.highlight-teal {
-	color: rgba(68, 131, 97, 1);
-	fill: rgba(68, 131, 97, 1);
-}
-.highlight-blue {
-	color: rgba(51, 126, 169, 1);
-	fill: rgba(51, 126, 169, 1);
-}
-.highlight-purple {
-	color: rgba(144, 101, 176, 1);
-	fill: rgba(144, 101, 176, 1);
-}
-.highlight-pink {
-	color: rgba(193, 76, 138, 1);
-	fill: rgba(193, 76, 138, 1);
-}
-.highlight-red {
-	color: rgba(212, 76, 71, 1);
-	fill: rgba(212, 76, 71, 1);
-}
-.highlight-gray_background {
-	background: rgba(241, 241, 239, 1);
-}
-.highlight-brown_background {
-	background: rgba(244, 238, 238, 1);
-}
-.highlight-orange_background {
-	background: rgba(251, 236, 221, 1);
-}
-.highlight-yellow_background {
-	background: rgba(251, 243, 219, 1);
-}
-.highlight-teal_background {
-	background: rgba(237, 243, 236, 1);
-}
-.highlight-blue_background {
-	background: rgba(231, 243, 248, 1);
-}
-.highlight-purple_background {
-	background: rgba(244, 240, 247, 0.8);
-}
-.highlight-pink_background {
-	background: rgba(249, 238, 243, 0.8);
-}
-.highlight-red_background {
-	background: rgba(253, 235, 236, 1);
-}
-.block-color-default {
-	color: inherit;
-	fill: inherit;
-}
-.block-color-gray {
-	color: rgba(120, 119, 116, 1);
-	fill: rgba(120, 119, 116, 1);
-}
-.block-color-brown {
-	color: rgba(159, 107, 83, 1);
-	fill: rgba(159, 107, 83, 1);
-}
-.block-color-orange {
-	color: rgba(217, 115, 13, 1);
-	fill: rgba(217, 115, 13, 1);
-}
-.block-color-yellow {
-	color: rgba(203, 145, 47, 1);
-	fill: rgba(203, 145, 47, 1);
-}
-.block-color-teal {
-	color: rgba(68, 131, 97, 1);
-	fill: rgba(68, 131, 97, 1);
-}
-.block-color-blue {
-	color: rgba(51, 126, 169, 1);
-	fill: rgba(51, 126, 169, 1);
-}
-.block-color-purple {
-	color: rgba(144, 101, 176, 1);
-	fill: rgba(144, 101, 176, 1);
-}
-.block-color-pink {
-	color: rgba(193, 76, 138, 1);
-	fill: rgba(193, 76, 138, 1);
-}
-.block-color-red {
-	color: rgba(212, 76, 71, 1);
-	fill: rgba(212, 76, 71, 1);
-}
-.block-color-gray_background {
-	background: rgba(241, 241, 239, 1);
-}
-.block-color-brown_background {
-	background: rgba(244, 238, 238, 1);
-}
-.block-color-orange_background {
-	background: rgba(251, 236, 221, 1);
-}
-.block-color-yellow_background {
-	background: rgba(251, 243, 219, 1);
-}
-.block-color-teal_background {
-	background: rgba(237, 243, 236, 1);
-}
-.block-color-blue_background {
-	background: rgba(231, 243, 248, 1);
-}
-.block-color-purple_background {
-	background: rgba(244, 240, 247, 0.8);
-}
-.block-color-pink_background {
-	background: rgba(249, 238, 243, 0.8);
-}
-.block-color-red_background {
-	background: rgba(253, 235, 236, 1);
-}
-.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
-.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
-.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
-.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
-.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
-.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
-.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
-.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
-.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
-.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
-.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
-.select-value-color-pageGlass { background-color: undefined; }
-.select-value-color-washGlass { background-color: undefined; }
-
-.checkbox {
-	display: inline-flex;
-	vertical-align: text-bottom;
-	width: 16;
-	height: 16;
-	background-size: 16px;
-	margin-left: 2px;
-	margin-right: 5px;
-}
-
-.checkbox-on {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-
-.checkbox-off {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-	
-</style></head><body><article id="ac00c284-1f21-49c9-925c-83514f6a94ea" class="page sans"><header><img class="page-cover-image" src="Esteban%20Leal%20ac00c2841f2149c9925c83514f6a94ea/Cover__Boxes_and_circles.png" style="object-position:center 61.84%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Esteban%20Leal%20ac00c2841f2149c9925c83514f6a94ea/yo.jpg"/></div><h1 class="page-title">Esteban Leal</h1><p class="page-description"></p></header><div class="page-body"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="69180bae-ea02-4cbf-99de-149d93ee0c89"><div style="font-size:1.5em"><span class="icon">🧑🏻‍🎨</span></div><div style="width:100%">Developer<em> | Engineering Student | Lifelong Learner |</em></div></figure><hr id="a349a83c-9167-4915-a071-5b14811c63ab"/><ul id="7116db32-36ba-47f6-b889-dbaed84a5db6" class="toggle"><li><details open=""><summary><strong>Page Navigation</strong></summary><nav id="eb1929db-69f4-4587-ab83-24d40d525636" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#03971dc0-e1da-49e9-8c9c-fd28eb3976e9">👋 About Me</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#44361965-49da-4633-933e-5773ea19bf9d">Creative Coder with a passion for learning</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#83d21561-3ffa-426a-b48d-0581ba595073">☎️ Contact</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#8c1a100d-f278-477f-ac1f-e3272a9a7a3e">🌐 Website</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#633256ca-67b9-4014-94d3-6c58f9304c4a">✨ Skills</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#7bfa7a7b-3b19-4362-a076-98aab54bdb6a">💫 Apps</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#cbc38727-4f11-46f9-980e-a3a7a958b095">🌟 Languages</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#0309aca3-3e74-4721-b9eb-e4cd3b77559e">🎓 Education</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#8f058447-9085-4219-aac6-d4e60a1a0c28">Instituto Tecnológico y de Estudios Superiores de Monterrey</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#a5b66da0-203c-425d-aa3c-0639114b9a86">🏆 Honors &amp; Awards</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#00b5a1d3-22bd-46c8-a0bc-585e371a4604">📒 Languaje Strategies: From the meme to divulgation</a></div></nav></details></li></ul><h1 id="03971dc0-e1da-49e9-8c9c-fd28eb3976e9" class="block-color-default">👋 About Me</h1><h2 id="44361965-49da-4633-933e-5773ea19bf9d" class="">Creative Coder with a passion for learning</h2><div id="431f671b-ec3b-47aa-b465-b52117187186" class="column-list"><div id="8bc807de-066c-4fa1-af48-7c1fed350560" style="width:37.5%" class="column"><figure id="c13e3fa8-7371-49d1-9833-0aa4af4a22d3" class="image"><a href="Esteban%20Leal%20ac00c2841f2149c9925c83514f6a94ea/charged_up.png"><img style="width:800px" src="Esteban%20Leal%20ac00c2841f2149c9925c83514f6a94ea/charged_up.png"/></a></figure><hr id="3f419291-2278-4a51-8e9e-af52fafa4565"/><p id="09d44d3f-6f7c-4495-a0cb-5c51cbb589c3" class="">💻 Passionate Developer
-📚 Engineering Student
-📘 Lifelong Learner</p></div><div id="4b4a287b-aa9e-4de2-8617-2f66e4b56eb8" style="width:81.25%" class="column"><blockquote id="e50b1564-8561-4d2d-affa-bce57af083b1" class="block-color-default">I am <strong>Esteban Leal Menéndez</strong>, current student at Tecnológico de Monterrey, studying Computer Technology Engineering. I like <strong>programming</strong> and anything to do with computers.
-I was on the Tecbot 3158 robotics team where I <strong>learned to program in Java</strong> and various mechanical things and due to my <strong>fast learning capabilities</strong> and <strong>dexterity</strong> I got to be part of the drive team. Later I was on the High Altitude 9280 robotics team as a <strong>programming mentor</strong>. Both participating in the FRC competition. I have participated in a Hack&#x27;n&#x27;jam where my team and I came in 4th place; and a Hackathon where my team and I won first place with an inclusive project based on sign language.<p id="e9c222b2-e634-4c9e-a17c-c267596e8f65" class="">Talking more about me, I really like <strong>learning and meeting people</strong>, that&#x27;s why I&#x27;m in the representative band of the campus playing electric guitar. I like to play sports, specifically team sports like soccer and volleyball, although I also like to play tennis. I love playing video games and watching movies.</p></blockquote><p id="0310eaba-85f6-4770-a2e4-91c1fec59a66" class="">
-</p><p id="06f26ee4-8e96-48bd-bb06-cca0dc259d4f" class="">
-</p></div></div><div id="261d539b-594d-4df3-bc54-5d257f3f94ed" class="column-list"><div id="b73fdee8-1796-4698-982f-9a49a294cfd8" style="width:68.75%" class="column"><h1 id="83d21561-3ffa-426a-b48d-0581ba595073" class="">☎️ Contact</h1><p id="da3a4c5e-bfb4-4988-92de-317740cebb28" class="">✉️ <strong>Email</strong></p><p id="2f277878-5136-4b37-a2c0-3005283cb415" class=""><a href="https://www.notion.so/Esteban-Leal-ac00c2841f2149c9925c83514f6a94ea?pvs=21">esteban.lealm@outlook.com</a></p><p id="215249db-6974-468b-b923-9e66a7ff5dcd" class="">📷 Instagram</p><p id="637b7dcc-1fe9-4905-99c3-e884aab041bc" class=""><strong><a href="https://www.instagram.com/mr.estebato/">@mr.estebato</a></strong></p><p id="8ca9d9f5-0c83-4af0-a835-40965c138e08" class="">
-</p></div><div id="bd2b3c7d-192a-403d-aa73-b51e783bde18" style="width:77.40384615384616%" class="column"><h1 id="8c1a100d-f278-477f-ac1f-e3272a9a7a3e" class="">🌐 Website</h1><p id="9532b9fe-ac94-4b76-b4fe-13a7d595d7e2" class="">💼 <strong>Linkedin</strong>
-<strong><a href="http://www.linkedin.com/in/esteban-l-b7aa97266">www.linkedin.com/in/esteban-l-b7aa97266</a></strong></p><p id="e9d36dcf-61c4-4902-a42b-1b29c6946025" class="">
-</p></div></div><div id="5f2852c9-4fec-46e8-be1e-5d8a5b3b44fb" class="column-list"><div id="75b9842c-dc81-4b23-adfe-2ff51126524f" style="width:41.666666666666664%" class="column"><h3 id="633256ca-67b9-4014-94d3-6c58f9304c4a" class="">✨ Skills</h3><p id="3040d56c-a247-4029-acbd-533b96a52ca3" class="">◈ Coding</p><p id="b4087478-751a-4746-ae3e-b557ee442e4d" class="">◈ Public Speech</p><p id="ddfcedaf-c6b7-46cb-80f3-f1d43016853d" class="">◈ Team work</p><p id="7ecc08ed-15f9-4321-a14b-50c971ae1130" class="">◈ Fast Learning</p></div><div id="b2f688f3-a37f-4152-95c8-f2cf5fba7086" style="width:33.33333333333333%" class="column"><h3 id="7bfa7a7b-3b19-4362-a076-98aab54bdb6a" class="">💫 Apps</h3><p id="a3743c9c-bfdd-4125-8773-b4f87a8ef4c7" class="">◈ Excel</p><p id="a502eaef-86a4-4605-a6ea-3336fa929fd4" class="">◈ Github</p><p id="a44b25ac-c2cb-4c57-8c90-619dd1154389" class="">◈ Visual Studio Code</p><p id="def22de5-ae69-459c-8620-7565c1c6e869" class="">◈ Pixlr</p></div><div id="883300d9-a355-4d8a-8e8d-43b0b744cd20" style="width:24.999999999999993%" class="column"><h3 id="cbc38727-4f11-46f9-980e-a3a7a958b095" class="">🌟 Languages</h3><p id="5b33f2ee-9a21-492c-ac00-451a07ea4a6f" class="">◈ Python</p><p id="0ffad370-5eaf-49a6-bd43-337327072f3b" class="">◈ Java</p><p id="3f34ef53-afb1-4c15-9ad0-f8775354940b" class="">◈ HTML/Javascript/CSS</p><p id="9f5b12bd-33ff-43b1-bdb5-1e2c4cf7d6d7" class="">◈ C++</p></div></div><hr id="f3252cf1-5e4d-43fd-a526-d4c0c7ec4fb8"/><h1 id="0309aca3-3e74-4721-b9eb-e4cd3b77559e" class="">🎓 Education</h1><h2 id="8f058447-9085-4219-aac6-d4e60a1a0c28" class="">Instituto Tecnológico y de Estudios Superiores de Monterrey</h2><hr id="69c5628f-8ac8-4d90-9605-76c48eb1fdba"/><p id="f8af7a18-f900-4ec4-b67e-f3c8641598da" class=""><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Current student in ITESM Campus Toluca</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></p><p id="6ca8657a-ae93-4c7e-97c4-6d8a6f240f18" class="">ITC (Engineering in computer technologies)</p><h1 id="a5b66da0-203c-425d-aa3c-0639114b9a86" class="">🏆 Honors &amp; Awards</h1><hr id="7d59ff15-d34d-4930-a9b5-82215d17474a"/><div id="b3561c7d-b411-4e69-b1df-5f5be8b3627e" class="column-list"><div id="fbbbc81b-f7e3-4988-bfaa-a3089817755b" style="width:50.00000000000002%" class="column"><blockquote id="c51bf015-b77a-47d3-8476-d4f01d91a187" class=""><strong>🎗️Active LiFE student
-</strong><hr id="b8ae9331-f1ec-45f0-8ec7-33964431a136"/><p id="2f13ce52-0cc0-4559-b3c6-e8adec38a5e5" class="">May 2022  <strong><strong>· PrepaTec Metepec</strong></strong></p><ul id="7f826692-f134-4a1c-b234-672b48f4e471" class="toggle"><li><details open=""><summary>Description</summary><p id="679f5fa6-653c-4d0a-9a26-0d5515cd4923" class="">I received and award regarding my excellent participation in extracurricular activities such as, music, soccer teams, tennis tournaments and volleyball tournaments as well as volunteering to help student groups ac</p></details></li></ul></blockquote></div><div id="cc8bfbb5-1962-4252-96ce-253f4506fb7c" style="width:50.000000000000014%" class="column"><blockquote id="de97ed44-9339-4e4d-b684-a0c7cc671f6e" class="">🥇<strong> 1st Place in Hackaton Competition</strong><hr id="b911a0f6-2822-4c24-a241-ebf1e6aaee45"/><p id="18625b39-9082-4b3d-9341-2d41117f08aa" class="">June 2023  <strong><strong>· Instituto Tecnológico y de Estudios Superiores de Monterrey</strong></strong></p><ul id="0754be66-e3d4-41de-900d-0d4626287db1" class="toggle"><li><details open=""><summary>Description</summary><p id="944b1216-6e04-40fa-b4ff-10ba6711ea41" class="">I participated in a competition called Hackaton hosted in ITESM Campus Toluca where my team and I created an inclusive idea to help deaf-mute and mute people  comunicate easily based on sign language.</p></details></li></ul></blockquote></div></div><hr id="8522307e-e283-4765-b3e2-a58b1f2a8778"/><p id="906459b8-3b14-41f9-9bcb-a8253f7cc108" class="">
-</p><h1 id="00b5a1d3-22bd-46c8-a0bc-585e371a4604" class="">📒 Languaje Strategies: From the meme to divulgation</h1><div id="dbeef3dc-3d30-4e46-8408-45c1335a6c2a" class="collection-content"><h4 class="collection-title">Activities M1</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>Name</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Credential ID</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Date Issued</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>From</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesUrl"><path d="M7.69922 10.8945L8.73828 9.84863C7.91797 9.77344 7.34375 9.51367 6.91992 9.08984C5.76465 7.93457 5.76465 6.29395 6.91309 5.14551L9.18262 2.87598C10.3379 1.7207 11.9717 1.7207 13.127 2.87598C14.2891 4.04492 14.2822 5.67188 13.1338 6.82031L11.958 7.99609C12.1768 8.49512 12.2451 9.10352 12.1289 9.62988L14.0908 7.6748C15.7725 6 15.7793 3.62109 14.084 1.92578C12.3887 0.223633 10.0098 0.237305 8.33496 1.91211L5.95605 4.29785C4.28125 5.97266 4.26758 8.35156 5.96289 10.0469C6.36621 10.4434 6.90625 10.7441 7.69922 10.8945ZM8.30078 5.13184L7.26855 6.17773C8.08203 6.25293 8.66309 6.51953 9.08008 6.93652C10.2422 8.09863 10.2422 9.73242 9.08691 10.8809L6.81738 13.1504C5.66211 14.3057 4.03516 14.3057 2.87305 13.1504C1.71094 11.9883 1.71777 10.3545 2.87305 9.20605L4.04199 8.03027C3.83008 7.53125 3.75488 6.92969 3.87109 6.39648L1.91602 8.35156C0.234375 10.0264 0.227539 12.4121 1.92285 14.1074C3.61816 15.8027 5.99707 15.7891 7.67188 14.1143L10.0439 11.7354C11.7256 10.0537 11.7324 7.6748 10.0371 5.98633C9.64062 5.58301 9.10059 5.28223 8.30078 5.13184Z"></path></svg></span>Verify</th></tr></thead><tbody><tr id="ecd5a571-11c2-4fb9-a6a7-9f9dff80d988"><td class="cell-title"><a href="https://www.notion.so/Curr-culum-vitae-ecd5a57111c24fb9a6a79f9dff80d988?pvs=21">Currículum vitae</a></td><td class="cell-DgQb"></td><td class="cell-KwK;"></td><td class="cell-QKPV"></td><td class="cell-Az~n"></td></tr><tr id="3e6dd263-7f73-4880-9d53-5b386c7f5faf"><td class="cell-title"><a href="https://www.notion.so/1-1-Comunicaci-n-y-sociedad-3e6dd2637f7348809d535b386c7f5faf?pvs=21">1.1 Comunicación y sociedad</a></td><td class="cell-DgQb"></td><td class="cell-KwK;"></td><td class="cell-QKPV"></td><td class="cell-Az~n"></td></tr><tr id="a0f58d03-6142-497e-bdd8-351628eb92fb"><td class="cell-title"><a href="https://www.notion.so/1-2-NO-TODA-LA-INFORMACI-N-ES-PARA-TODOS-a0f58d036142497ebdd8351628eb92fb?pvs=21">1.2 NO TODA LA INFORMACIÓN ES PARA TODOS</a></td><td class="cell-DgQb"></td><td class="cell-KwK;"></td><td class="cell-QKPV"></td><td class="cell-Az~n"></td></tr><tr id="02c6d297-959b-4f1f-849e-5f0d5d6261a6"><td class="cell-title"><a href="https://www.notion.so/1-2-NO-TODA-LA-INFORMACI-N-ES-PARA-TODOS-02c6d297959b4f1f849e5f0d5d6261a6?pvs=21">1.2 NO TODA LA INFORMACIÓN ES PARA TODOS</a></td><td class="cell-DgQb"></td><td class="cell-KwK;"></td><td class="cell-QKPV"></td><td class="cell-Az~n"></td></tr><tr id="de23471e-6152-4b01-9750-9e9e30e8573e"><td class="cell-title"><a href="https://www.notion.so/Cine-minuto-de23471e61524b0197509e9e30e8573e?pvs=21">Cine minuto</a></td><td class="cell-DgQb"></td><td class="cell-KwK;"></td><td class="cell-QKPV"></td><td class="cell-Az~n"></td></tr><tr id="9f077b25-37c8-4283-83a0-83f2674d2061"><td class="cell-title"><a href="https://www.notion.so/ELEVATOR-PITCH-WONKA-9f077b2537c8428383a083f2674d2061?pvs=21">ELEVATOR PITCH: WONKA</a></td><td class="cell-DgQb"></td><td class="cell-KwK;"></td><td class="cell-QKPV"></td><td class="cell-Az~n"></td></tr></tbody></table><br/><br/></div><div id="fdc451b6-901d-4a51-bb33-6427149c6290" class="collection-content"><h4 class="collection-title">Activities M2</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>Name</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesCreatedAt"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM4.54102 8.91211H7.99316C8.30078 8.91211 8.54004 8.67285 8.54004 8.37207V3.8877C8.54004 3.58691 8.30078 3.34766 7.99316 3.34766C7.69238 3.34766 7.45312 3.58691 7.45312 3.8877V7.83203H4.54102C4.2334 7.83203 4.00098 8.06445 4.00098 8.37207C4.00098 8.67285 4.2334 8.91211 4.54102 8.91211Z"></path></svg></span>Created</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Tags</th></tr></thead><tbody><tr id="0071dd42-4e6d-46f9-b34c-1219248080c7"><td class="cell-title"><a href="https://www.notion.so/2-1-COMPRENDO-LO-QUE-ESCUCHO-0071dd424e6d46f9b34c1219248080c7?pvs=21">2.1 ¿COMPRENDO LO QUE ESCUCHO?</a></td><td class="cell-?^iY"><time>@September 5, 2023 12:42 AM</time></td><td class="cell-GkI["></td></tr><tr id="f2331a98-c4ce-4ad8-82dd-ac93777c02c4"><td class="cell-title"><a href="https://www.notion.so/2-2-QUI-N-DIJO-QU-f2331a98c4ce4ad882ddac93777c02c4?pvs=21">2.2 ¿QUIÉN DIJO QUÉ?</a></td><td class="cell-?^iY"><time>@September 5, 2023 12:42 AM</time></td><td class="cell-GkI["></td></tr><tr id="245a37da-2300-48ea-8126-78893960b7ad"><td class="cell-title"><a href="https://www.notion.so/2-3-CREER-O-NO-CREER-245a37da230048ea812678893960b7ad?pvs=21">2.3 CREER O NO CREER</a></td><td class="cell-?^iY"><time>@September 5, 2023 12:42 AM</time></td><td class="cell-GkI["></td></tr><tr id="fbca3fae-58e9-477e-8884-c2bd0198e1e6"><td class="cell-title"><a href="https://www.notion.so/2-4-FICHAS-DE-LECTURA-fbca3fae58e9477e8884c2bd0198e1e6?pvs=21">2.4 FICHAS DE LECTURA</a></td><td class="cell-?^iY"><time>@September 5, 2023 12:48 AM</time></td><td class="cell-GkI["></td></tr><tr id="cd0ea5f6-5c7b-45e5-b09c-e8d7f9b149cb"><td class="cell-title"><a href="https://www.notion.so/2-5-DETECTIVES-DE-LA-LECTURA-Y-ESCRITURA-CR-TICA-cd0ea5f65c7b45e5b09ce8d7f9b149cb?pvs=21">2.5 DETECTIVES DE LA LECTURA Y ESCRITURA CRÍTICA</a></td><td class="cell-?^iY"><time>@September 5, 2023 12:48 AM</time></td><td class="cell-GkI["></td></tr><tr id="462e1e01-d535-45d1-9b45-70095b376e82"><td class="cell-title"><a href="https://www.notion.so/COMPRENSI-N-DE-MEMES-462e1e01d53545d19b4570095b376e82?pvs=21">COMPRENSIÓN DE MEMES</a></td><td class="cell-?^iY"><time>@September 5, 2023 12:49 AM</time></td><td class="cell-GkI["></td></tr></tbody></table><br/><br/></div><div id="7ae3210d-5dd2-4f6e-a5f4-8ef8ef6b70ae" class="collection-content"><h4 class="collection-title">Activities M3</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>Name</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesCreatedAt"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM4.54102 8.91211H7.99316C8.30078 8.91211 8.54004 8.67285 8.54004 8.37207V3.8877C8.54004 3.58691 8.30078 3.34766 7.99316 3.34766C7.69238 3.34766 7.45312 3.58691 7.45312 3.8877V7.83203H4.54102C4.2334 7.83203 4.00098 8.06445 4.00098 8.37207C4.00098 8.67285 4.2334 8.91211 4.54102 8.91211Z"></path></svg></span>Created</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Tags</th></tr></thead><tbody><tr id="4bb45ab5-750c-43a3-8369-990a39d5dae5"><td class="cell-title"><a href="https://www.notion.so/3-1-EN-EL-PEDIR-EST-EL-DAR-4bb45ab5750c43a38369990a39d5dae5?pvs=21">3.1 EN EL PEDIR ESTÁ EL DAR</a></td><td class="cell-yLdR"><time>@September 5, 2023 12:50 AM</time></td><td class="cell-[oWq"></td></tr><tr id="d3bdba60-fccc-4f67-bcb3-e2afed2d5344"><td class="cell-title"><a href="https://www.notion.so/3-2-EN-QU-ERES-EXPERTO-d3bdba60fccc4f67bcb3e2afed2d5344?pvs=21">3.2 EN QUÉ ERES EXPERTO</a></td><td class="cell-yLdR"><time>@September 5, 2023 12:50 AM</time></td><td class="cell-[oWq"></td></tr><tr id="3c775dfa-98e9-4493-a4c4-72453ba246c7"><td class="cell-title"><a href="https://www.notion.so/3-3-PODCAST-UNIVERSITARIO-3c775dfa98e94493a4c472453ba246c7?pvs=21">3.3 PODCAST UNIVERSITARIO</a></td><td class="cell-yLdR"><time>@September 5, 2023 12:50 AM</time></td><td class="cell-[oWq"></td></tr></tbody></table><br/><br/></div></div></article></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- =====BOX ICONS===== -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Portfolio website complete</title>
+  </head>
+  <body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+      <nav class="nav bd-grid">
+        <div>
+          <a href="#" class="nav__logo">Esteban</a>
+        </div>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active">Esteban</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">Acerca de</a>
+            </li>
+            <li class="nav__item">
+              <a href="#modulo1" class="nav__link">Módulo 1</a>
+            </li>
+            <li class="nav__item">
+              <a href="#modulo2" class="nav__link">Módulo 2</a>
+            </li>
+            <li class="nav__item">
+              <a href="#modulo3" class="nav__link">Módulo 3</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-menu"></i>
+        </div>
+      </nav>
+    </header>
+
+    <main class="l-main">
+      <!--===== HOME =====-->
+      <section class="home bd-grid" id="home">
+        <div class="home__data">
+          <h1 class="home__title">
+            Hi,<br />Soy <span class="home__title-color">Esteban</span
+            ><br />Programador
+          </h1>
+        </div>
+
+        <div class="home__social">
+          <a
+            href="https://www.linkedin.com/in/esteban-l-b7aa97266"
+            target="_blank"
+            class="home__social-icon"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+          <a
+            href="https://github.com/MrEstebato"
+            class="home__social-icon"
+            target="_blank"
+            ><i class="bx bxl-github"></i
+          ></a>
+        </div>
+
+        <div class="home__img">
+          <svg
+            class="home__blob"
+            viewBox="0 0 479 467"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <mask id="mask0" mask-type="alpha">
+              <path
+                d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"
+              />
+            </mask>
+            <g mask="url(#mask0)">
+              <path
+                d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"
+              />
+              <image
+                class="home__blob-img"
+                x="50"
+                y="60"
+                href="assets/img/perfil.png"
+              />
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      <!--===== ABOUT =====-->
+      <section class="about section" id="about">
+        <h2 class="section-title">Acerca de mi</h2>
+
+        <div class="about__container bd-grid">
+          <div class="about__img">
+            <img src="assets/img/about.png" alt="" />
+          </div>
+
+          <div>
+            <h2 class="about__subtitle">Hola, Soy Esteban</h2>
+            <p class="about__text">
+              Soy <b>Esteban Leal Menéndez</b>, actual estudiante del
+              Tecnológico de Monterrey, estudiando Ingeniería en Tecnología
+              Computacional. Me gusta <b>programar</b> y todo lo que tenga que
+              ver con computadoras. Estuve en el equipo de robótica Tecbot 3158
+              donde <b>aprendí a programar en Java</b> y varias cosas mecánicas
+              y debido a mis <b>capacidades de aprendizaje rápido</b> y
+              <b>destreza</b> llegué a formar parte del equipo de manejo. Más
+              tarde estuve en el equipo de robótica High Altitude 9280 como
+              <b>mentor de programación</b>. Ambos participando en la
+              competición FRC. He participado en un Hack'n'jam donde mi equipo y
+              yo quedamos en 4º lugar; y en un Hackathon donde mi equipo y yo
+              ganamos el primer puesto con un proyecto inclusivo basado en el
+              lenguaje de signos. Hablando más de mí, me gusta mucho
+              <b>aprender y conocer gente</b>, por eso estoy en la banda
+              representativa del campus tocando la guitarra eléctrica. Me gusta
+              hacer deporte, concretamente deportes de equipo como el fútbol y
+              el voleibol, aunque también me gusta jugar al tenis. Me encanta
+              jugar a videojuegos y ver películas.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--===== Modulo 1 =====-->
+      <section class="skills section" id="modulo1">
+        <h2 class="section-title">Modulo 2</h2>
+
+        <div class="work__container bd-grid">
+            <a href="https://www.canva.com/design/DAFruQUmL9A/PrOaZFrzDr1VRVWZKZdrGw/view?utm_content=DAFruQUmL9A&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" class="work__img" target="_blank">
+              <img src="assets/img/mod11.png" alt="" />
+              <h4 class="about__subtitle" style="color:#000000"><center>Currículum Vitae</center></h4>
+            </a>
+            <a href="https://www.canva.com/design/DAFrEfKrgx0/4tOkmdPVqFpSK_LJ1rH5LQ/view?utm_content=DAFrEfKrgx0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" class="work__img" target="_blank">
+              <img src="assets/img/mod12.png" alt="" />
+              <h4 class="about__subtitle" style="color:#000000"><center>1.1 Comunicación y Socidad</center></h4>
+            </a>
+            <a href="" class="work__img">
+              <img src="assets/img/mod13.png" alt="" />
+              <h4 class="about__subtitle" style="color:#000000"><center>1.2 No toda la información es para todos (Individual)</center></h4>
+            </a>
+            <a href="https://www.canva.com/design/DAFroAsKdvY/UlXifjPGEiw__sPPZl-5bw/view?utm_content=DAFroAsKdvY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" class="work__img" target="_blank">
+              <img src="assets/img/mod14.png" alt="" />
+              <h4 class="about__subtitle" style="color:#000000"><center>Currículum Vitae (Grupal)</center></h4>
+            </a>
+            <a href="https://www.youtube.com/watch?app=desktop&v=WgWqqah1__M&feature=shared" class="work__img" target="_blank">
+                <img src="assets/img/mod17.png" alt="" />
+                <h4 class="about__subtitle" style="color:#000000"><center>Presentación Mimos</center></h4>
+              </a>
+            <a href="https://drive.google.com/file/d/1LRVZVuL_ookVITDLNn6g9Vux48ewS_Ka/view?usp=sharing" class="work__img" target="_blank">
+              <img src="assets/img/mod15.png" alt="" />
+              <h4 class="about__subtitle" style="color:#000000"><center>Cine Minuto</center></h4>
+            </a>
+            <a href="https://drive.google.com/file/d/1O5XZiDVnHw2LzfnPHsVVT1Q1Hb-SkOWw/view?usp=sharing" class="work__img" target="_blank">
+              <img src="assets/img/mod16.png" alt="" />
+              <h4 class="about__subtitle" style="color:#000000"><center>Elevator Pitch: Wonka (Video)</center></h4>
+            </a>
+            <a href="https://docs.google.com/document/d/1WatZmNAoA8pJuHhONagabjPAnNn4gLU1kCbWvPGwV10/edit?usp=sharing" class="work__img" target="_blank">
+                <img src="assets/img/mod18.jpg" alt="" />
+                <h4 class="about__subtitle" style="color:#000000"><center>Elevator Pitch: Wonka (Guión)</center></h4>
+              </a>
+          </div>
+    
+
+      <!--===== Modulo 2 =====-->
+      <section class="work section" id="modulo2">
+        <h2 class="section-title">Modulo 2</h2>
+
+        <div class="work__container bd-grid">
+          <a href="https://docs.google.com/document/d/1dm8znw3UfQtUrLhSVvQEVNsD2oEfwy8h7aeAMKR_Ll0/edit?usp=sharing" class="work__img" target="_blank">
+            <img src="assets/img/mod21.jpg" alt="" />
+            <h4 class="about__subtitle" style="color:#000000"><center>2.1 ¿Comprendo lo que escucho?</center></h4>
+          </a>
+          <a href="https://docs.google.com/document/d/1XIyQ5h-CckPiSl7mmvIzawaeV_Kd9NhrKLHV-ojrkwo/edit?usp=sharing" class="work__img" target="_blank">
+            <img src="assets/img/word.png" alt="" />
+            <h4 class="about__subtitle" style="color:#000000"><center>2.2 ¿Quién dijo qué?</center></h4>
+          </a>
+          <a href="https://www.canva.com/design/DAFsRwMuc3o/Shh6VIVgQrB44F0UKlWL5Q/edit?utm_content=DAFsRwMuc3o&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="work__img" target="_blank">
+            <img src="assets/img/mod23.png" alt="" />
+            <h4 class="about__subtitle" style="color:#000000"><center>2.3 Creer o no creer</center></h4>
+          </a>
+          <a href="https://docs.google.com/document/d/1iVq9ElTB8PEurwYY4sVQ08THD7xDlBb3/edit?usp=sharing&ouid=111266971315715567253&rtpof=true&sd=true" class="work__img" target="_blank">
+            <img src="assets/img/word.png" alt="" />
+            <h4 class="about__subtitle" style="color:#000000"><center>2.4 Ficha de lectura</center></h4>
+          </a>
+          <a href="https://docs.google.com/document/d/17ghOofUZCDtMWpFXguIGFmIL03zt0Kf5QT9dDolGUm4/edit?usp=sharing" class="work__img" target="_blank">
+            <img src="assets/img/word.png" alt="" />
+            <h4 class="about__subtitle" style="color:#000000"><center>2.5 Detectives de la lectura y escritura crítica</center></h4>
+          </a>
+          <a href="https://docs.google.com/document/d/1Oo5fyFU6iBGtj2q1Q20AwEUERrSfuSrsSzKzSD2ud5U/edit?usp=sharing" class="work__img" target="_blank">
+            <img src="assets/img/mod26.png" alt="" />
+            <h4 class="about__subtitle" style="color:#000000"><center>2.6 Comprensión de memes</center></h4>
+          </a>
+        </div>
+      </section>
+
+      <!--===== Modulo 3 =====-->
+      <section class="contact section" id="modulo3">
+        <h2 class="section-title">Modulo 3</h2>
+
+        <div class="work__container bd-grid">
+            <a href="https://www.canva.com/design/DAFtCe4RHyU/SbF1zVpllsqQmWImeSubbA/view?utm_content=DAFtCe4RHyU&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" class="work__img" target="_blank">
+              <img src="assets/img/mod31.png" alt="" />
+              <h4 class="about__subtitle" style="color:#000000"><center>Currículum Vitae</center></h4>
+            </a>
+            <a href="https://docs.google.com/document/d/15dzm1SOeFYfp760sDeWUhqf1VXpfJCSnK93XJbWBKm4/edit?usp=sharing" class="work__img" target="_blank">
+              <img src="assets/img/word.png" alt="" />
+              <h4 class="about__subtitle" style="color:#000000"><center>Currículum Vitae</center></h4>
+            </a>
+            <a href="https://drive.google.com/file/d/1c2lUYTGHccDD7B-UXoQU2GyF7plY9hs5/view?usp=sharing" class="work__img" target="_blank">
+              <img src="assets/img/mod33.png" alt="" />
+              <h4 class="about__subtitle" style="color:#000000"><center>Currículum Vitae</center></h4>
+            </a>
+          </div>
+      </section>
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+      <p class="footer__title">Esteban Leal Menéndez</p>
+      <div class="footer__social">
+        <a href="https://www.facebook.com/steve.leal.129" class="footer__icon" target="_blank"> <i class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/mr.estebato/" class="footer__icon" target="_blank"><i class="bx bxl-instagram"></i></a>
+      </div>
+      <p class="footer__copy">&#169; Bedimcode. All rigths reserved</p>
+    </footer>
+
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
